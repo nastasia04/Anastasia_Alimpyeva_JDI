@@ -21,6 +21,7 @@ public class JdiSite {
     }
 
     public static void clickHeaderMenuItem(String item) {
+        // TODO This is completely prohibited to use raw selenium calls in PO methods !
         header.find(By.xpath("//a[contains(.,'" + item + "')]")).click();
     }
 }
