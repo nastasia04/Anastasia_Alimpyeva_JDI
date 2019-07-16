@@ -22,6 +22,7 @@ public class JdiSiteTest {
         initElements(JdiSite.class);
     }
 
+    // TODO Why don't you create .gitignore file ?
     @Test
     public void loginTest() {
         JdiSite.open()
@@ -36,7 +37,6 @@ public class JdiSiteTest {
 
     @AfterClass
     public void afterClass() {
-
         killAllSeleniumDrivers();
     }
 }

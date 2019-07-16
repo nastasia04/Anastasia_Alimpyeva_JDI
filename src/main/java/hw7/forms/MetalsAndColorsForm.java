@@ -10,18 +10,22 @@ import hw7.entities.MetalsAndColors;
 public class MetalsAndColorsForm {
     @XPath("//p[contains(.//label, '%s')]")
     private RadioButtons summary;
+
     @XPath("//p[@class='checkbox'][contains(., '%s')]//label")
     private UIElement elements;
+
     @JDropdown(root = "#colors",
             value = ".filter-option",
             list = "li",
             expand = ".caret")
     private Droplist colors;
+
     @JDropdown(root = "#metals",
             value = ".filter-option",
             list = "li",
             expand = ".caret")
     private Droplist metals;
+
     @JDropdown(root = "#vegetables",
             value = ".filter-option",
             list = "li",
