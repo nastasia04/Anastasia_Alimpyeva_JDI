@@ -6,9 +6,9 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public enum HeaderMenu {
-    HOME("Home"),
-    CONTACT_FORM("Contact form"),
-    SERVICE("Service"),
-    METALS_COLORS("Metals & Colors");
+    HOME("HOME"),
+    CONTACT_FORM("CONTACT FORM"),
+    SERVICE("SERVICE"),
+    METALS_COLORS("METALS & COLORS");
     public String value;
 }
