@@ -20,7 +20,6 @@ public class JdiSite {
     }
 
     public static void clickHeaderMenuItem(String item) {
-        // TODO This is completely prohibited to use raw selenium calls in PO methods ! - fixed
         header.select(item);
     }
 }

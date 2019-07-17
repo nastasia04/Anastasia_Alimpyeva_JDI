@@ -22,7 +22,6 @@ public class JdiSiteTest {
         initElements(JdiSite.class);
     }
 
-    // TODO Why don't you create .gitignore file ? - fixed
     @Test
     public void loginTest() {
         JdiSite.open()
