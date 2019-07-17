@@ -9,7 +9,7 @@ public class MetalsAndColorsData {
         s.setSummary(Arrays.asList(3, 8));
         s.setElements(Arrays.asList("Water", "Fire"));
         s.setColor("Red");
-        s.setMetal("Selen");
+        s.setMetals("Selen");
         s.setVegetables(Arrays.asList("Cucumber", "Tomato"));
     });
 }

@@ -36,7 +36,7 @@ public class MetalsAndColorsForm {
         data.getSummary().forEach(number -> summary.select(String.valueOf(number)));
         data.getElements().forEach(element -> elements.select(element));
         colors.select(data.getColor());
-        metals.select(data.getMetal());
+        metals.select(data.getMetals());
         emptyVegetablesForm();
         data.getVegetables().forEach(vegetable -> vegetables.select(vegetable));
     }

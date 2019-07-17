@@ -13,12 +13,15 @@ import hw7.forms.MetalsAndColorsForm;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static hw7.JdiSite.*;
+import static hw7.enums.HeaderMenu.HOME;
 import static org.testng.AssertJUnit.assertEquals;
 
 
 @Url("metals-colors.html")
 @Title("Metal and Colors")
 public class MetalsAndColorsPage extends WebPage {
+
     private MetalsAndColorsForm metalsAndColorsForm;
 
     @UI("['Submit']")
@@ -38,8 +41,14 @@ public class MetalsAndColorsPage extends WebPage {
         return this;
     }
 
-    public void checkResultSection(MetalsAndColors data) {
+    public MetalsAndColorsPage checkResultSection(MetalsAndColors data) {
         assertEquals(getActualResultData(), data.getAllData());
+        return this;
+    }
+
+    public HomePage goToHomePage() {
+        clickHeaderMenuItem(HOME.getValue());
+        return homePage;
     }
 
     private List<String> getActualResultData() {

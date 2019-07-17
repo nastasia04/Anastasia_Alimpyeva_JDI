@@ -13,7 +13,7 @@ public class MetalsAndColors extends DataClass<MetalsAndColors> {
     private List<Integer> summary;
     private List<String> elements;
     private String color;
-    private String metal;
+    private String metals;
     private List<String> vegetables;
 
     public int sum() {
@@ -25,7 +25,7 @@ public class MetalsAndColors extends DataClass<MetalsAndColors> {
         resultList.add("Summary: " + sum());
         resultList.add("Elements: " + listOfElementsToString(elements));
         resultList.add("Color: " + color);
-        resultList.add("Metal: " + metal);
+        resultList.add("Metal: " + metals);
         resultList.add("Vegetables: " + listOfElementsToString(vegetables));
         return resultList;
     }
