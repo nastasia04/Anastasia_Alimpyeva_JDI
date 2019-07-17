@@ -19,13 +19,11 @@ import static org.testng.AssertJUnit.assertEquals;
 @Url("metals-colors.html")
 @Title("Metal and Colors")
 public class MetalsAndColorsPage extends WebPage {
-    // TODO What is the reason fo 'static' here ? - fixed
     private MetalsAndColorsForm metalsAndColorsForm;
 
     @UI("['Submit']")
     private Button submit;
 
-    // TODO Same story lime 20 - fixed
     @XPath("//ul[contains(@class,'results')]")
     private UIElement resultSection;
 
@@ -40,15 +38,14 @@ public class MetalsAndColorsPage extends WebPage {
         return this;
     }
 
-    // TODO The certain sequence of log's rows doesn't matter in this case. - fixed
-    // It will be easier to compare just two List<strings>
-    // First list you can generate from MetalsAndColors instance
-    // Second list can be generated from Log ui-element
     public void checkResultSection(MetalsAndColors data) {
         assertEquals(getActualResultData(), data.getAllData());
     }
 
     private List<String> getActualResultData() {
-        return resultSection.childs().stream().map(UIElement::getText).collect(Collectors.toList());
+        return resultSection.childs()
+                .stream()
+                .map(UIElement::getText)
+                .collect(Collectors.toList());
     }
 }
